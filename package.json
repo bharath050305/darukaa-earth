@@ -1,0 +1,22 @@
+{
+  "name": "darukaa-earth",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root tooling for pre-commit hooks across the Darukaa.Earth full-stack app.",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10"
+  },
+  "lint-staged": {
+    "frontend/**/*.{ts,tsx,js,jsx,css,md,json}": [
+      "frontend/node_modules/.bin/prettier --write"
+    ],
+    "backend/**/*.py": [
+      "backend/.venv/Scripts/ruff.exe check --fix",
+      "backend/.venv/Scripts/black.exe"
+    ]
+  }
+}

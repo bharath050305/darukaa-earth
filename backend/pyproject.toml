@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+exclude = ["alembic/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008"]
+
+[tool.black]
+line-length = 110
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
