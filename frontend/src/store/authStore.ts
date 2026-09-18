@@ -1,3 +1,4 @@
+import { isAxiosError } from 'axios';
 import { create } from 'zustand';
 import { fetchCurrentUser, loginUser, registerUser } from '../api/endpoints';
 import type { User } from '../types';
@@ -58,8 +59,10 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const user = await fetchCurrentUser();
       set({ user, isInitialized: true });
-    } catch {
-      localStorage.removeItem('darukaa_token');
+    } catch (error) {
+      if (isAxiosError(error) && error.response?.status === 401) {
+        localStorage.removeItem('darukaa_token');
+      }
       set({ user: null, isInitialized: true });
     }
   },
