@@ -136,7 +136,7 @@ export function MapView({
         }));
       source.setData({ type: 'FeatureCollection', features });
 
-      if (features.length > 0 && !selectedSiteId) {
+      if (features.length > 0) {
         const bounds = new mapboxgl.LngLatBounds();
         features.forEach((f) => {
           f.geometry.coordinates[0].forEach((coord) => bounds.extend(coord as [number, number]));
