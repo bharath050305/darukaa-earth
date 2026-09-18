@@ -4,8 +4,8 @@ A full-stack geospatial analytics platform for managing and visualizing carbon a
 projects. Administrators can create projects, draw site boundaries on an interactive map, and
 review carbon/biodiversity performance over time.
 
-**Live demo:** _add your deployed Render URL here_
-**Demo login:** `demo@darukaa.earth` / `DarukaaDemo123!` (seeded automatically, see [Seeding demo data](#seeding-demo-data))
+**Live demo:** https://darukaa-frontend-eago.onrender.com (API: https://darukaa-backend-7ux6.onrender.com)
+**Demo login:** `demo@darukaa.earth` / `DarukaaDemo123!` (see [Seeding demo data](#seeding-demo-data) to populate it)
 
 ---
 

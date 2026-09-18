@@ -26,7 +26,7 @@ services:
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "1440"
       - key: CORS_ORIGINS
-        value: https://darukaa-frontend.onrender.com
+        value: https://darukaa-frontend-eago.onrender.com
       - key: ENVIRONMENT
         value: production
 
@@ -38,7 +38,7 @@ services:
     autoDeploy: true
     envVars:
       - key: VITE_API_URL
-        value: https://darukaa-backend.onrender.com
+        value: https://darukaa-backend-7ux6.onrender.com
       - key: VITE_MAPBOX_TOKEN
         sync: false
     routes:
