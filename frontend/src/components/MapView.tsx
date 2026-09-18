@@ -49,6 +49,7 @@ export function MapView({
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
       center: [-10, 10],
       zoom: 1.5,
+      projection: 'mercator',
     });
     mapRef.current = map;
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
