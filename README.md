@@ -162,6 +162,13 @@ sample projects (Amazon Basin Reforestation, Western Ghats Biodiversity Corridor
 
 ### Running tests
 
+Tests run against their own `darukaa_test` database (never the dev/demo `darukaa` database,
+since the test fixtures `DROP` and recreate all tables on every run). Create it once:
+
+```bash
+docker compose exec db psql -U darukaa -d darukaa -c "CREATE DATABASE darukaa_test OWNER darukaa;"
+```
+
 ```bash
 # Backend (needs a running Postgres+PostGIS — docker compose up -d db)
 cd backend && pytest -v --cov=app

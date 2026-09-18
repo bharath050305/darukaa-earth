@@ -1,6 +1,6 @@
 import os
 
-os.environ.setdefault("DATABASE_URL", "postgresql+psycopg2://darukaa:darukaa@localhost:5432/darukaa_test")
+os.environ.setdefault("DATABASE_URL", "postgresql+psycopg2://darukaa:darukaa@localhost:5433/darukaa_test")
 
 import pytest
 from fastapi.testclient import TestClient
