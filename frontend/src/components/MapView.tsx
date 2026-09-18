@@ -53,6 +53,9 @@ export function MapView({
     mapRef.current = map;
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
+    const resizeObserver = new ResizeObserver(() => map.resize());
+    resizeObserver.observe(containerRef.current);
+
     if (drawable) {
       const draw = new MapboxDraw({
         displayControlsDefault: false,
@@ -109,6 +112,7 @@ export function MapView({
     });
 
     return () => {
+      resizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
     };
